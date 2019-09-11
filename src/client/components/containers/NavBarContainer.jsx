@@ -106,6 +106,8 @@ class NavBarContainer extends Component {
   render(props) {
     // Call setAppElement to properly hide application from assistive screenreaders and other assistive technologies while the modal is open
     ReactModal.setAppElement('#root');
+    // All reqRes controls handled by the ReqResController can be called without additional helper functions and require no checks before execution
+    // ^ Because of this, all reqRes related buttons have a simple onClick linked to speciic ReqResController methods
     return (
       <div className="navbar-console">
         <div className="navbar-console_inner">
