@@ -78,7 +78,7 @@ const BarGraph = (props) => {
       labels: labelArr,
       datasets: [
         {
-          label: 'Response Time',
+          label: 'Response Time (ms)', // jWallNote - added units, kinda important as an engineer :)
           data: timesArr,
           backgroundColor: BGsArr,
           borderColor: bordersArr,

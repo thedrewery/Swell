@@ -27,7 +27,7 @@ const GraphQLBodyEntryForm = (props) => {
   // set a new value for codemirror only if loading from history or changing query type
   useEffect(() => {
     if (!bodyIsNew) setValue(bodyContent);
-  }, [bodyContent, bodyIsNew]); // jWallNote: added bodyIsNew to dependencies list per eslint error
+  }, [bodyContent, bodyIsNew]); // jWallNote: added bodyIsNew to dependencies list per eslint error (it was missing)
 
   const isDark = useSelector((store) => store.ui.isDark);
 

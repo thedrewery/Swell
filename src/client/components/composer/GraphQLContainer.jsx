@@ -75,7 +75,7 @@ function GraphQLContainer({
       }
       if (url && bodyContent) {
         try {
-          gql` // jWallNote: removed assignment to const body
+          gql` // jWallNote: removed assignment to const 'body' (not needed)
             ${bodyContent}
           `;
         } catch (e) {
@@ -97,7 +97,6 @@ function GraphQLContainer({
 
     let reqRes;
     const protocol = url.match(/(https?:\/\/)|(wss?:\/\/)/)[0];
-    // console.log(protocol); // jWallNote: test
     // HTTP && GRAPHQL QUERY & MUTATION REQUESTS
     if (!/wss?:\/\//.test(protocol) && !gRPC) {
       const URIWithoutProtocol = `${url.split(protocol)[1]}/`; 
