@@ -142,7 +142,7 @@ const WebhookContainer = ({
         },
       })
         .then((data) => data.json())
-        .then((url) => {
+        .then((url) => { // jWallNote: [issue] eslint - url already declare in upper scope
           // set boolean value server status to false
           console.log(url)
         })

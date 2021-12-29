@@ -9,7 +9,7 @@ import GraphQLContainer from './GraphQLContainer.jsx';
 import GRPCContainer from './GRPCContainer.jsx';
 import WSContainer from './WSContainer.jsx';
 import WebRTCContainer from './WebRTCContainer';
-import WebhoContainer from './WebhoContainer';
+import WebhookContainer from './WebhookContainer'; // jWallNote - fixed name of file
 
 const mapStateToProps = (store) => {
   return {
@@ -277,7 +277,7 @@ const ComposerContainer = (props) => {
           <WebRTCContainer {...props} />
         )}
         {props.newRequestFields.network === 'webhook' && (
-          <WebhoContainer {...props} />
+          <WebhookContainer {...props} /> // jWallNote - fixed name of file
         )}
       </div>
     </div>

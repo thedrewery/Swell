@@ -75,7 +75,7 @@ function GraphQLContainer({
       }
       if (url && bodyContent) {
         try {
-          const body = gql`
+          gql` // jWallNote: removed assignment to const body
             ${bodyContent}
           `;
         } catch (e) {
@@ -97,11 +97,12 @@ function GraphQLContainer({
 
     let reqRes;
     const protocol = url.match(/(https?:\/\/)|(wss?:\/\/)/)[0];
+    // console.log(protocol); // jWallNote: test
     // HTTP && GRAPHQL QUERY & MUTATION REQUESTS
     if (!/wss?:\/\//.test(protocol) && !gRPC) {
-      const URIWithoutProtocol = `${url.split(protocol)[1]}/`;
+      const URIWithoutProtocol = `${url.split(protocol)[1]}/`; 
       const host = protocol + URIWithoutProtocol.split('/')[0];
-      let path = `/${URIWithoutProtocol.split('/')
+      let path = `/${URIWithoutProtocol.split('/') 
         .splice(1)
         .join('/')
         .replace(/\/{2,}/g, '/')}`;
@@ -151,8 +152,8 @@ function GraphQLContainer({
       };
     }
     // GraphQL Subscriptions
-    const URIWithoutProtocol = `${url.split(protocol)[1]}/`;
-    const host = protocol + URIWithoutProtocol.split('/')[0];
+    const URIWithoutProtocol = `${url.split(protocol)[1]}/`; 
+    const host = protocol + URIWithoutProtocol.split('/')[0]; 
     let path = `/${URIWithoutProtocol.split('/')
       .splice(1)
       .join('/')

@@ -260,7 +260,7 @@
     "spectron": "^15.0.0",
     "style-loader": "^0.23.1",
     "ts-loader": "^8.0.0",
-    "ts-migrate": "^0.1.26",
+    "ts-migrate": "^0.1.27",
     "typescript": "^4.1.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.46.0",
@@ -494,6 +494,31 @@
       "name": "Adrian Uesugui",
       "email": "https://www.linkedin.com/in/auesugui/",
       "url": "https://github.com/auesugui"
+    },
+    {
+      "name": "Jay Wall",
+      "email": "https://www.linkedin.com/in/hanswand/",
+      "url": "https://github.com/hanswand"
+    },
+    {
+      "name": "Genevieve Annable",
+      "email": "https://www.linkedin.com/in/genevieveannable/",
+      "url": "https://github.com/gigifeeds"
+    },
+    {
+      "name": "Drew Pomatti",
+      "email": "https://www.linkedin.com/in/drewpomatti/",
+      "url": "https://github.com/thedrewery"
+    },
+    {
+      "name": "Kurtis Waterbury",
+      "email": "https://www.linkedin.com/in/kurtiswaterbury/",
+      "url": "https://github.com/kurto8"
+    },
+    {
+      "name": "Sam Pyo",
+      "email": "https://www.linkedin.com/in/samhpyo/",
+      "url": "https://github.com/samhpyo"
     }
   ]
 }

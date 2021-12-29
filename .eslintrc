@@ -176,6 +176,7 @@ module.exports = {
         'prettier',
       ],
       rules: {
+        'prettier/prettier': 2, // jWallNote - added per ts-migrate guidance
         'react/react-in-jsx-scope': 'off',
         'react/prop-types': [0],
         // temp allowing during TS migration

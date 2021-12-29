@@ -1,4 +1,4 @@
-import React, { useState, useEffect, JSXElementConstructor } from 'react';
+import React, { useState, useEffect } from 'react'; // jWallNote - removed JSXElementConstructor, as it wasn't used
 import { HashRouter } from 'react-router-dom';
 import ContentsContainer from './ContentsContainer';
 import SidebarContainer from './SidebarContainer';
@@ -12,7 +12,7 @@ import '../../../assets/style/App.scss';
 
 const { api } = window as unknown as WindowExt;
 
-const App = () => { //what type is being returned?
+const App: React.FC = () => { // jWallNote - fixed TS function type (it was mssing) -> now React.FC (https://stackoverflow.com/questions/44133420/what-is-the-typescript-return-type-of-a-react-stateless-component)
   const [message, setMessage] = useState(null);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const App = () => { //what type is being returned?
       <div
         id="app"
         className={`columns is-gapless ${!message && 'is-tall'} ${
-          message && 'is-tall-message'
+          {message} && 'is-tall-message'
         }`}
       >
         <HashRouter>

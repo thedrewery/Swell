@@ -11,7 +11,7 @@ import * as actions from '../../actions/actions';
 import ComposerContainer from '../composer/ComposerContainer';
 import HistoryContainer from './HistoryContainer';
 
-const SidebarContainer = (props) => {
+const SidebarContainer = (props) => { //jWallNote: [issue] eslint - props is defined, but never used - and has no type
   // const { isDark } = props;
 
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ const SidebarContainer = (props) => {
   const setActiveTab = (tabName: string) =>
     dispatch(actions.setSidebarActiveTab(tabName));
     
-  const handleDarkMode = (e) => {
+  const handleDarkMode = (e) => { // jWallNote - need to set TS type = String/Boolean don't work with e.target
     dispatch(actions.toggleDarkMode(e.target.checked));
   };
 
@@ -44,9 +44,9 @@ const SidebarContainer = (props) => {
             }}
             checked={isDark}
         />
-          <label htmlFor="darkModeSwitch"/>
+          <label htmlFor="darkModeSwitch"/> {/*jWallNote - need ref={} somewhere, I think*/}
         <h3 className='has-text-justified align-self-center'>Composer</h3>
-        <a>v1.0 </a>
+        <a>v1.0.1 (LA47)</a>
       </div>
       <div className="tabs mb-0  header-bar">
         <ul className={`columns is-gapless ${isDark ? 'is-dark-400' : ''}`}>

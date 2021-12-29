@@ -14,9 +14,9 @@ import 'codemirror/addon/lint/lint.css';
 
 const GraphQLBodyEntryForm = (props) => {
   const {
-    newRequestBody,
-    newRequestBody: { bodyContent },
-    newRequestBody: { bodyIsNew },
+    newRequestBody, 
+    newRequestBody: { bodyContent }, 
+    newRequestBody: { bodyIsNew }, 
     setNewRequestBody,
     warningMessage,
     introspectionData,
@@ -27,7 +27,7 @@ const GraphQLBodyEntryForm = (props) => {
   // set a new value for codemirror only if loading from history or changing query type
   useEffect(() => {
     if (!bodyIsNew) setValue(bodyContent);
-  }, [bodyContent]);
+  }, [bodyContent, bodyIsNew]); // jWallNote: added bodyIsNew to dependencies list per eslint error
 
   const isDark = useSelector((store) => store.ui.isDark);
 

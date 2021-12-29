@@ -68,3 +68,6 @@ test/subSuites/*.png
 
 # db #
 .env
+
+# mac finder file #
+.DS_Store
